@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Symptoms Input</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('{{ url_for('static', filename='symp.jpg') }}');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #333;
+            padding-top: 100px;
+        }
+
+        #navbar {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        #navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        #navbar a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        #google_translate_element {
+
+            z-index: 1000;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #000;
+            font-size: 36px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1;
+        }
+
+        form {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            border: 2px solid #000;
+        }
+
+        label {
+            display: flex;
+            align-items: center;
+            margin-right: 30px;
+            width: calc(33.33% - 30px);
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        input[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="google_translate_element"></div>
+    <div id="navbar">
+        <a href="{{ url_for('logout') }}">LOGOUT</a>
+        <a href="{{ url_for('chatbot') }}" class="btn">CHATBOT</a>
+    </div>
+    <h2>Please select your symptoms:</h2>
+    <form action="/predict" method="post">
+        {% for symptom, index in symptoms_dict|dictsort(true, 'key') %}
+            <label>
+                <input type="checkbox" id="{{ symptom }}" name="symptoms" value="{{ symptom }}">
+                {{ symptom.replace('_', ' ').capitalize() }}
+            </label>
+        {% endfor %}
+        <input type="submit" value="Submit">
+    </form>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>

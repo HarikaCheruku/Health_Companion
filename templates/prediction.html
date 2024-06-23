@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Results</title>
+    <style>
+        body {
+            font-family: 'Segoe UI';
+            background-image: url('{{ url_for('static', filename='symp.jpg') }}');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #333;
+            padding-top: 100px;
+        }
+
+        #navbar {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        #navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 8px;
+            margin-right: 30px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        #navbar a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #000;
+        }
+
+        .container {
+            display: flex;
+            margin-top: 20px;
+            width: 80%;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .buttons {
+            flex: 0 0 200px;
+            display: flex;
+            flex-direction: column;
+            margin-left: 40px;
+        }
+
+        button {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #3CB371;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background-color: #2E8B57;
+            transform: scale(1.05);
+        }
+
+        .content {
+            flex: 1;
+            padding-left: 20px;
+        }
+
+        .content-box {
+            display: none;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                transform: translateY(10px);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .diet-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .diet-list-container {
+            flex: 1;
+            margin-right: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .diet-list {
+            margin-bottom: 10px; /* Add space between the list and the button */
+        }
+
+        .image-container {
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .diet-image {
+            width: calc(33.33% - 10px);
+        }
+
+        .diet-image img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .speak-aloud-button {
+            width: auto;
+            padding: 10px;
+            background-color: red;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            align-self: flex-start;
+        }
+
+        .speak-aloud-button:hover {
+            background-color: #dc3545;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: black;
+      font-size: 36px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 1;
+    }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <a href="{{ url_for('logout') }}">LOGOUT</a>
+        <a href="/chatbot">CHAT BOT</a>
+    </div>
+
+    <h1>Prediction Results</h1>
+
+    <div id="google_translate_element"></div>
+
+    <div class="container">
+        <div class="buttons">
+            <button onclick="toggleSection('disease')">Show Predicted Disease</button>
+            <button onclick="toggleSection('description')">Show Description</button>
+            <button onclick="toggleSection('precautions')">Show Precautions/First Aid Steps</button>
+            <button onclick="toggleSection('medicines')">Show Medicines</button>
+            <button onclick="toggleSection('diet')">Show Recommended Diet</button>
+            <button onclick="toggleSection('workout')">Show Health Tips</button>
+        </div>
+        <div class="content">
+            <div id="disease" class="content-box">
+                <h2>Predicted Disease: <span class="translatable">{{ predicted_disease }}</span></h2>
+                <button class="speak-aloud-button" onclick="speakAloud('disease')">Speak Aloud</button>
+            </div>
+            <div id="description" class="content-box">
+                <h3>Description:</h3>
+                <p class="translatable">{{ dis_des }}</p>
+                <button class="speak-aloud-button" onclick="speakAloud('description')">Speak Aloud</button>
+            </div>
+            <div id="precautions" class="content-box">
+                <h3>Precautions/First Aid Steps</h3>
+                <ul>
+                    {% for precaution in my_precautions %}
+                        <li class="translatable">{{ precaution }}</li>
+                    {% endfor %}
+                </ul>
+                <button class="speak-aloud-button" onclick="speakAloud('precautions')">Speak Aloud</button>
+            </div>
+            <div id="medicines" class="content-box">
+                <h3>Top Medicines</h3>
+                <ul>
+                    {% for medicine in medications %}
+                        <li class="translatable">{{ medicine }}</li>
+                    {% endfor %}
+                </ul>
+                <button class="speak-aloud-button" onclick="speakAloud('medicines')">Speak Aloud</button>
+            </div>
+            <div id="diet" class="content-box">
+                <h3>Recommended Diets</h3>
+                <div class="diet-container">
+                    <div class="diet-list-container">
+                        <ul class="diet-list">
+                            {% for item in my_diet %}
+                                <li class="translatable">{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                        <button class="speak-aloud-button" onclick="speakAloud('diet')">Speak Aloud</button>
+                    </div>
+                    <div class="image-container">
+                        {% for diet, image_url in diet_image_urls.items() %}
+                            <div class="diet-image">
+                                <img src="{{ image_url }}" alt="{{ diet }}">
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <div id="workout" class="content-box">
+                <h3>Health Tips</h3>
+                <ul>
+                    {% for tip in workout %}
+                        <li class="translatable">{{ tip }}</li>
+                    {% endfor %}
+                </ul>
+                <button class="speak-aloud-button" onclick="speakAloud('workout')">Speak Aloud</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleSection(sectionId) {
+            var sections = document.querySelectorAll('.content-box');
+            sections.forEach(function(section) {
+                section.style.display = 'none';
+            });
+            var sectionDiv = document.getElementById(sectionId);
+            sectionDiv.style.display = 'block';
+        }
+
+        function speakAloud(sectionId) {
+            var sectionDiv = document.getElementById(sectionId);
+            var textElements = sectionDiv.querySelectorAll('.translatable');
+            var text = Array.from(textElements).map(el => el.innerText).join(' ');
+            var lang = document.querySelector('.goog-te-combo').value || 'en';
+
+            fetch('/speak_aloud', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ text: text, lang: lang }),
+            })
+            .then(response => response.blob())
+            .then(blob => {
+                var url = URL.createObjectURL(blob);
+                var audio = new Audio(url);
+                audio.play();
+            });
+        }
+
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>

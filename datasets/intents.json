@@ -1,0 +1,765 @@
+{
+    "intents": [
+        {
+            "tag":"greetings",
+            "patterns": ["hello","hey","hi","good day","greetings","what's up?","how is it going"],
+            "responses":["hello","hey!","what can i do for you?"]
+           },
+           {
+            "tag":"goodbye",
+            "patterns": ["cya","see you later","goodbye","have a good day","bye","cao","see ya"],
+            "responses":["have a nice day","goodbye"]
+           },
+
+           {
+            "tag":"name",
+            "patterns": ["what is your name","what should i call you","what's your name?","who are you?","can you tell me your name"],
+            "responses":["you can call me Medbot!","i am Medbot!","i am Medbot your medical assistant"]
+           },
+           {
+            "tag": "Nasal Congestion",
+            "patterns": [
+              "I have a stuffy nose",
+              "My nose is blocked",
+              "I'm experiencing nasal congestion",
+              "What to do for nasal congestion?",
+              "i have blocked nose",
+
+              "What are the symptoms of nasal congestion?"
+            ],
+            "responses": ["Nasal congestion, or a stuffy nose, occurs when your nasal passages become swollen and inflamed. It's commonly caused by minor illnesses such as colds, the flu, or sinus infections. Symptoms may include: - Runny nose, Sneezing, Sore throat,Cough,Headache,Low fever or no fever in adults and older children,Fever around 100°F to 102°F (37.7°C to 38.8°C) in young children  Home remedies can help relieve nasal congestion:,Use humidifiers to add moisture to the air and soothe inflamed nasal passageways,Prop your head up on pillows to encourage mucus drainage from your nasal passages.,Try saline sprays or nasal irrigation devices like a neti pot to flush out mucus and reduce inflammation."]
+        },
+        {
+            "tag": "Nasal Congestion Medication",
+            "patterns": [
+                "What medications can I take for a stuffy nose?",
+                "Which medicines help with nasal congestion?",
+                "Are there any drugs for relieving nasal congestion?",
+                "Can you recommend any over-the-counter remedies for a blocked nose?",
+                "I need something to clear my nasal passages, what do you suggest?",
+                "What are the best medications for nasal congestion?",
+                "Are there any nasal sprays that can help unclog my nose?",
+                "Which decongestants are effective for relieving stuffiness?",
+                "medicines for stuffy nose",
+                "medicines for blocked nose",
+
+                "medications for blocked nose",
+                "blocked nose medicines",
+                "blocked nose medications"
+
+            ],
+
+            "responses": [
+                  "Medications used to treat nasal congestion include:- Oral antihistamines for allergies.Nasal sprays containing antihistamines or steroids .Over-the-counter or prescription-strength decongestants.asal sprays, like naphazoline (Privine), oxymetazoline (Afrin, Dristan, Nostrilla, Vicks Sinus Nasal Spray), or phenylephrine (Neo-Synephrine, Rhinall, Sinex).If nasal congestion persists for longer than 10-14 days or is accompanied by other symptoms like fever, severe headache, cough, sore throat, or runny nose, it may indicate an underlying health issue. In such cases, it's important to consult a healthcare professional for proper diagnosis and treatment."
+
+
+                ],
+                "context": [ "" ]
+            },
+            {
+                "tag": "Cough",
+                "patterns": [
+                  "How to cure cough?", "How do you treat cough?","What to do if I get a cough?","Which medicine to take if I get cough?","How do you get rid of cough?"
+                ],
+                "responses": [
+                  "Coughing is the body's way of clearing the throat and airways of mucus, dust, and other irritants. It can be caused by various factors such as infections, allergies, or environmental irritants. Here are some common cough syrups containing Dextromethorphan (DM): Robitussin (Dextromethorphan (DM), Cough suppressant), Delsym (Dextromethorphan (DM), Cough suppressant), Vicks DayQuil Cough (Dextromethorphan (DM), Cough suppressant). Remedies include: Honey: Mix 2 teaspoons of honey with warm water or herbal tea and drink once or twice a day. Do not give honey to children under 1 year of age. Ginger: Brew a soothing ginger tea by adding fresh ginger slices to hot water. Add honey or lemon juice for taste. Stay hydrated: Drink plenty of fluids to help thin mucus and ease coughing. Steam: Inhale steam from a bowl of hot water or take a hot shower to moisturize the airways. In addition to cough syrups, other medications used to treat cough include: Expectorants to thin mucus and make it easier to expel. Antihistamines for coughs caused by allergies. If cough persists for more than a few weeks or is accompanied by other symptoms like fever, chest pain, or difficulty breathing, it's important to see a doctor for proper evaluation and treatment."
+                ],
+                "context": [""]
+              },
+              {
+                "tag": "Seizure Identification",
+                "patterns": [
+                  "seizure","I'm experiencing strange symptoms", "I feel like my body is jerking uncontrollably", "I can't move and I feel really stiff","I lost consciousness for a brief moment","I had difficulty breathing","I think I may have drooled or frothed","I felt really confused after waking up","My mood suddenly changed","I experienced cognitive or emotional changes","my body is jerking","my friends body is jerking","i am experiencing jerkings through out my body","my body is jerking very badly"
+                ],
+                "responses": [
+                  "It sounds like you may have had a seizure. Seizures can manifest in various ways, including jerking movements, stiffness, loss of consciousness, breathing problems, drooling or frothing, confusion, mood changes, and cognitive or emotional changes. It's important to seek medical attention if you've experienced these symptoms,Based on your description, it's possible that you had a seizure. Seizures can present with symptoms such as jerking movements, stiffness, loss of consciousness, breathing difficulties, drooling or frothing, confusion, mood changes, and cognitive or emotional changes. It's crucial to consult with a healthcare professional for proper evaluation and treatment."
+                ],
+                "context": [""]
+              },
+
+
+       {
+        "context": [ "" ],
+        "patterns": [ "I want treatment", "please help", "treatment", "please give me treatment", "need treatment" ],
+        "responses": [ "Please tell me what you need treatment for." ],
+        "tag": "treatment"
+     },
+
+
+
+
+       {"tag": "What are the symptoms of COVID 19?",
+        "patterns": ["symptoms of covid 19", "symptoms of coronavirus", "covid 19 symptoms", "coronavirus symptoms"],
+        "responses": ["Coronaviruses are a large family of viruses which may cause illness in animals or humans.  In humans, several coronaviruses are known to cause respiratory infections ranging from the common cold to more severe diseases such as Middle East Respiratory Syndrome (MERS) and Severe Acute Respiratory Syndrome (SARS). The most recently discovered coronavirus causes coronavirus disease COVID-19.The most common symptoms of COVID-19 are fever, tiredness, and dry cough. Some patients may have aches and pains, nasal congestion, runny nose, sore throat or diarrhea. These symptoms are usually mild and begin gradually. Some people become infected but donâ€™t develop any symptoms and don't feel unwell. Most people (about 80%) recover from the disease without needing special treatment. Around 1 out of every 6 people who gets COVID-19 becomes seriously ill and develops difficulty breathing. Older people, and those with underlying medical problems like high blood pressure, heart problems or diabetes, are more likely to develop serious illness. People with fever, cough and difficulty breathing should seek medical attention."],
+        "context": [ "" ]
+       },
+
+
+       {"tag": "Is there a vaccine, drug or treatment for COVID-19",
+        "patterns": ["Is there a vaccine, drug or treatment for COVID 19", "Is there a vaccine, drug or treatment for coronavirus"],
+        "responses": ["Not yet. To date, there is no vaccine and no specific antiviral medicine to prevent or treat COVID-2019. However, those affected should receive care to relieve symptoms. People with serious illness should be hospitalized. Most patients recover thanks to supportive care.Possible vaccines and some specific drug treatments are under investigation. They are being tested through clinical trials. WHO is coordinating efforts to develop vaccines and medicines to prevent and treat COVID-19.The most effective ways to protect yourself and others against COVID-19 are to frequently clean your hands, cover your cough with the bend of elbow or tissue, and maintain a distance of at least 1 meter (3 feet) from people who are coughing or sneezing"],
+        "context": [ "" ]
+       },
+       {
+        "tag": "COVID_vs_Cold",
+        "patterns": [
+          "What are the differences between COVID-19 and a common cold?",
+          "How can I tell if I have COVID-19 or just a cold?",
+          "COVID-19 symptoms vs cold symptoms",
+          "Difference between COVID and cold",
+          "do i have cold or covid 19"
+        ],
+        "responses": [
+          "Here are some differences between COVID-19 and a common cold:\nHeadache (COVID-19: Usually, Cold: Rare).\nCough (COVID-19: Usually (dry), Cold: Usually).\nMuscle aches (COVID-19: Usually, Cold: Sometimes).\nTiredness (COVID-19: Usually, Cold: Sometimes).\nSneezing (COVID-19: Rarely, Cold: Usually).\nSore throat (COVID-19: Usually, Cold: Usually).\nRunny or stuffy nose (COVID-19: Usually, Cold: Usually).\nFever (COVID-19: Usually, Cold: Sometimes).\nDiarrhea (COVID-19: Sometimes, Cold: Never).\nNausea or vomiting (COVID-19: Sometimes, Cold: Never).\nNew loss of taste or smell (COVID-19: Usually (early — often without a runny or stuffy nose), Cold: Sometimes (especially with a stuffy nose)).\nWhile both COVID-19 and the common cold can cause symptoms like cough, sore throat, and runny nose, there are some differences in the frequency and severity of certain symptoms. If you're experiencing symptoms consistent with COVID-19, especially if they persist or worsen, it's important to get tested and follow local health guidelines."
+        ]
+        ,
+        "context": [""]
+      },
+
+
+       {"tag": "Abrasions",
+        "patterns": ["how do you treat abrasions?", "Do Abrasions cause scars?", "Abrasions", "what to do if abrasions?", "Which medicine to apply for abrasions?", "How to cure abrasions?"],
+        "responses": ["Begin with washed hands.Gently clean the area with cool to lukewarm water and mild soap. Remove dirt or other particles from the wound using sterilized tweezers.For a mild scrape that’s not bleeding, leave the wound uncovered.If the wound is bleeding, use a clean cloth or bandage, and apply gentle pressure to the area to stop any bleeding.Cover a wound that bled with a thin layer of topical antibiotic ointment, like Bacitracin, or a sterile moisture barrier ointment, like Aquaphor. Cover it with a clean bandage or gauze. Gently clean the wound and change the ointment and bandage once per day.Watch the area for signs of infection, like pain or redness and swelling. See your doctor if you suspect infection."],
+        "context": [ "" ]
+       },
+
+       {"tag": "stings",
+        "patterns": ["How do you treat Sting?", "Stings", "What to do if you get a sting?", "Which medicine to apply if sting?"],
+        "responses": ["Remove any stingers immediately. Some experts recommend scraping out the stinger with a credit card. Applying ice to the site may provide some mild relief. Apply ice for 20 minutes once every hour as needed. Wrap the ice in a towel or keep a cloth between the ice and skin to keep from freezing the skin. Taking an antihistamine such as diphenhydramine (Benadryl) or a nonsedating one such as loratadine (Claritin) will help with itching and swelling. Take acetaminophen (Tylenol) or ibuprofen (Motrin)for pain relief as needed. Wash the sting site with soap and water. Placing hydrocortisone cream on the sting can help relieve redness, itching, and swelling."],
+        "context": [ "" ]
+       },
+
+       {"tag": "Splinter",
+        "patterns": ["How to remove Splinters", "How to cure Splinters?", "What to do if I have splinters?", "How do you bring a splinter to the surface?"],
+        "responses": ["1. SOAK IT IN EPSOM SALTS. Dissolve a cup of the salts into a warm bath and soak whatever part of the body has the splinter. Failing that, you can also put some of the salts onto a bandage pad and leave it covered for a day; this will eventually help bring the splinter to the surface. 2. VINEGAR OR OIL. Another simple way to draw out that stubborn splinter is to soak the affected area in oil (olive or corn) or white vinegar. Just pour some in a bowl and soak the area for around 20 to 30 minutes,"],
+        "context": [ "" ]
+       },
+
+       {"tag": "Sprains",
+        "patterns": ["How do you treat a sprain?", "what to do if i get a sprain?", "Which cream to apply if i get a sprain?", "Which medicine to apply if I get a sprain?"],
+        "responses": ["Use an ice pack or ice slush bath immediately for 15 to 20 minutes and repeat every two to three hours while you're awake. To help stop swelling, compress the ankle with an elastic bandage until the swelling stops. In most cases, pain relievers — such as ibuprofen (Advil, Motrin IB, others) or naproxen sodium (Aleve, others) or acetaminophen (Tylenol, others) are enough to manage the pain of a sprained ankle."],
+        "context": [ "" ]
+       },
+
+       {"tag": "Strains",
+        "patterns": ["How do you treat a strain?", "what to do if i get a strain?", "Which cream to apply if i get a strain?", "Which medicine to apply if I get a strain?", "How do you diagnose a strain?", "Is heat or ice better for a pulled muscle?"],
+        "responses": ["Rest,Ice,Compression and Elevation can be used to cure strains. Avoid using your muscle for a few days, especially if movement causes an increase in pain and also Apply ice immediately after injuring your muscle. This will minimize swelling. Don’t put ice directly on your skin. Use an ice pack or wrap ice in a towel. To reduce swelling, wrap the affected area with an elastic bandage until swelling comes down."],
+        "context": [ "" ]
+       },
+
+
+       {
+        "tag": "Fever",
+        "patterns": [
+            "What are the symptoms of fever?",
+            "I have fever",
+            "I'm feeling feverish",
+            "fever",
+            "My temperature is 100 F?",
+            "My temperature is between 100 F-101 F?",
+            "temperature between 100 F-101 F?",
+            "temperature is 101 F",
+            "I have only fever nothing else",
+            "Only fever, not feeling anything else"
+        ],
+        "responses": [
+            "I'm sorry to hear that. Fever is very common and there's no need to worry. You can use simple remedies like drinking plenty of fluids, taking a lukewarm bath, and resting. Over-the-counter medications such as paracetamol (Tylenol) or ibuprofen (Advil, Motrin) can provide temporary relief. Take these medications with a gap of at least 6 hours. If the fever persists, please see a doctor. Have you been experiencing chills?"
+        ],
+        "context": [""]
+    },
+
+    {
+        "tag": "Fever with chills",
+        "patterns": [
+
+            "Yes, I have chills",
+
+            "chills",
+
+
+            "fever with chills",
+
+            "chills with fever",
+            "medicines for fever with chills",
+
+            "fever with shivering",
+            "fever and shivering",
+            "I am having fever with shivering",
+            "I have fever and shivering"
+
+        ],
+        "responses": [
+            "I'm sorry to hear that you're experiencing fever with chills. This might be a case of the flu or a common cold, which are typically not serious. You can use medications like paracetamol (Tylenol) or ibuprofen (Advil, Motrin) for relief. Make sure to drink plenty of fluids and rest. If you have a high fever or if the symptoms persist, please see a doctor. Do you have a high fever?"
+        ],
+        "context": [""]
+    },
+    {
+        "tag": "Fever with cough",
+        "patterns": [
+            "I have a fever and cough",
+            "fever with cough",
+            "cough with fever",
+            "I am coughing and have a fever",
+            "I have a cough and fever",
+            "fever and cough"
+        ],
+        "responses": [
+            " This might be a sign of an infection such as the flu or a respiratory tract infection. It's important to rest, stay hydrated, and consider using over-the-counter medications like paracetamol (Tylenol) or ibuprofen (Advil, Motrin) to help reduce fever and alleviate cough symptoms. If your symptoms persist or worsen, or if you experience difficulty breathing or chest pain, please seek medical attention promptly."
+        ],
+        "context": [""]
+    },
+
+    {
+        "tag": "High Fever with chills",
+        "patterns": [
+            "Yes, I'm experiencing high fever with chills",
+            "I have high fever with chills",
+            "high fever and chills",
+            "very high fever with chills",
+            "temperature more than 102F with chills",
+            "I am having high fever and chills",
+            "my high fever with chills is not coming down for many days",
+            "fever with more than 102F and chills"
+        ],
+        "responses": [
+            "If you are experiencing a high fever with chills, it might just be a severe case of flu, which can be treated using medications like paracetamol (Tylenol) or ibuprofen (Advil, Motrin). However, high fever with chills can also be a sign of more serious conditions such as viral fever, malaria, dengue or typhoid. If you want to know more about these, please continue interacting with the chatbot or consult a doctor immediately."
+        ],
+        "context": [""]
+    },
+    {
+        "tag": "Viral Fever",
+        "patterns": [
+            "Yes, I want to know about viral fever",
+            "Could high fever be caused by viral fever?",
+            "viral fever"
+        ],
+        "responses": [
+            "Viral fever symptoms depend on the type of viral infection. General symptoms may include a high temperature, burning eyes, headaches, body aches, nausea, vomiting, runny nose, frequent chills with shivering, and sweating. Over-the-counter (OTC) medications like paracetamol (Tylenol) or ibuprofen (Advil, Motrin) can help. If the fever persists, please consult a doctor."
+        ],
+        "context": [""]
+    },
+    {
+        "tag": "Malaria",
+        "patterns": [
+            "Yes, I want to know about malaria",
+            "Could high fever be caused by malaria?",
+            "malaria",
+            "I think I have malaria",
+            "How do I know if I have malaria?",
+            "How can I know if I have malaria?",
+            "What if I have malaria?"
+        ],
+        "responses": [
+            "Malaria is a disease caused by parasites that are transmitted through mosquito bites. Common symptoms include high fever with chills, sweats, headache, and body aches. In malaria, fever often has a cyclic pattern, occurring in episodes every 24 to 72 hours. If you suspect malaria, please seek medical attention promptly for proper diagnosis and treatment."
+        ],
+        "context": [""]
+    },
+    {
+        "tag": "Medications Malaria",
+        "patterns": [
+            "Yes, I want to know about medications for malaria",
+            "medications for malaria",
+            "medicines for malaria",
+            "I want medicines for malaria",
+            "Can you tell me malaria medicines?",
+            "Can you give me medicines for malaria?"
+        ],
+        "responses": [
+            "Medications for malaria include Artemisinin-based combination therapies (ACTs), Chloroquine, Quinine, Atovaquone-proguanil (Malarone), and Doxycycline. If you suspect you have malaria, seek medical attention promptly for proper diagnosis and care.Please take the medications according to the  doctor's prescription."
+        ],
+        "context": [""]
+    },
+    {
+        "tag": "Dengue",
+        "patterns": [
+            "Yes, I want to know about dengue",
+            "What are the symptoms of dengue?",
+            "Do mosquito bites cause dengue?",
+            "How to know if I have dengue?",
+            "Can I know the symptoms of dengue?",
+            "I think I have dengue",
+            "dengue"
+        ],
+        "responses": [
+            "Dengue is a viral infection transmitted by mosquitoes, particularly the Aedes aegypti mosquito. Symptoms can include high fever with chills, severe headache, joint and muscle pain, rash, and bleeding gums. If you suspect dengue, please consult a doctor for proper diagnosis and treatment."
+        ],
+        "context": [""]
+    },
+    {
+        "tag": "Medications Dengue",
+        "patterns": [
+            "Yes, I want to know about medications for dengue",
+            "What is the treatment for dengue?",
+            "medications for dengue",
+            "dengue medicines",
+            "Can you give me medicines for dengue?",
+            "How to treat dengue?",
+            "Treatment for dengue"
+        ],
+        "responses": [
+            "For dengue fever, pain relievers like paracetamol (Tylenol) can help manage symptoms. Avoid aspirin and nonsteroidal anti-inflammatory drugs (NSAIDs) as they can increase bleeding risk. Adequate fluid intake and rest are crucial. If symptoms are severe, hospitalization may be necessary. Please consult a doctor for appropriate care."
+        ],
+        "context": [""]
+    },
+    {
+      "tag": "Typhoid",
+      "patterns": [
+          "typhoid","how do i know if i have typhoid","i think i have typhoid","can u tell me more about typhoid"
+      ],
+      "responses": [
+          "Symptoms of typhoid fever include high fever, headache, weakness, abdominal pain, poor appetite, diarrhea or constipation, rash of flat, rose-colored spots, enlarged spleen and liver, confusion or delirium, and slow heart rate."
+      ],
+      "context": [""]
+  },
+
+  {
+    "tag": "Typhoid medicines",
+    "patterns": [
+        "typhoid medicines","medications for typhoid","how to cure typhoid","how to get relief from typhoid","ways to get relief from typhoid",
+        "typhoid medicines"
+    ],
+    "responses": [
+        "Medicines commonly used to treat typhoid fever include antibiotics such as fluoroquinolones or cephalosporins; however, please consult a doctor for proper diagnosis and treatment and please take the medications according to the  doctor's prescription."
+    ],
+    "context": [""]
+  },
+
+
+    {
+      "tag": "Stomach Pain",
+      "patterns": [
+          "What could be causing my stomach pain?",
+          "I have stomach pain",
+          "stomach pain",
+          "my stomach is aching",
+          "stomach ache",
+          "I'm having stomach pain",
+          "I'm having abdomen pain",
+          "causes of stomach ache",
+          "abdominal pain"
+      ],
+      "responses": [
+          "Medicines for stomach pain include antacids (e.g., Tums, Rolaids), H2 blockers (e.g., ranitidine, famotidine), proton pump inhibitors (e.g., omeprazole, esomeprazole), antispasmodics (e.g., dicyclomine, hyoscyamine), and over-the-counter pain relievers (e.g., acetaminophen). It's important to follow the dosage instructions on the packaging or as prescribed by your doctor. If your stomach pain persists or worsens, please consult a doctor for further evaluation and treatment."
+      ],
+      "context": [""]
+  },
+  {
+      "tag": "Persistent Stomach Pain",
+      "patterns": [
+          "My stomach pain isn't reducing even after taking medicine",
+          "stomach pain not going away",
+          "still having stomach pain",
+          "pain still persists",
+          "medicine not helping my stomach ache",
+          "i am still having stomach pain",
+          "my stomach pain is still not reducing"
+      ],
+      "responses": [
+          "If your stomach pain persists even after taking over-the-counter medication, it might be due to another underlying issue. Are you experiencing any of these symptoms: gas or bloating, acid reflux, nausea, vomiting, or diarrhea?"
+      ],
+      "context": [""]
+  },
+  {
+      "tag": "No Initial Symptoms",
+      "patterns": [
+          "no dont have those symptoms",
+          "no i don't have gas or bloating",
+          "no, i don't have acid reflux",
+          "no I don't have nausea or vomiting",
+          "no i don't have diarrhea"
+      ],
+      "responses": [
+          "If you are not experiencing those symptoms, it might be something more serious. Do you have any of the following symptoms: pain that starts around the navel and moves to the lower right abdomen, severe pain that worsens with movement or coughing, fever, nausea and vomiting, loss of appetite then you might have Appendicitis, or sharp, stabbing pain? Or do you have severe, cramping pain in the back, belly, or groin, pain that comes in waves and fluctuates in intensity, difficulty urinating, blood in the urine, nausea,vomiting? then you might have kidney stones"
+      ],
+      "context": [""]
+  },
+
+  {
+      "tag": "Infection",
+      "patterns": [
+          "Yes, I have nausea",
+          "Yes, I have vomiting",
+
+          "I think it's a stomach infection",
+          "I have a stomach bug"
+      ],
+      "responses": [
+          "For a stomach infection, it's important to stay hydrated. Drink plenty of clear fluids like water, oral rehydration solutions, or clear broths. Over-the-counter medications like Pepto-Bismol can help with nausea and diarrhea. Antibiotics such as amoxicillin, cephalexin, and erythromycin may be prescribed by a doctor if the infection is bacterial. If symptoms persist for more than a couple of days, or if you have a high fever, please see a doctor."
+      ],
+      "context": [""]
+  },
+  {
+      "tag": "UTI",
+      "patterns": [
+          "I have pain when urinating",
+          "I think it's a urinary infection",
+          "I have a UTI",
+          "Yes, I have urinary pain",
+          "Yes, I have frequent urination",
+          "i have pain while urin",
+          "i have pain when i urinate",
+          "urin pain"
+      ],
+      "responses": [
+          "If you have pain during urination or frequent urination, you might have a urinary tract infection (UTI). Drinking plenty of water and taking over-the-counter pain relievers can help alleviate symptoms. It's important to see a doctor for proper diagnosis and antibiotics if needed."
+      ],
+      "context": [""]
+  },
+
+  {
+    "tag": "Persistent Urinary Pain",
+    "patterns": [
+      "My urinary pain isn't reducing even after taking medicine",
+      "Urinary pain not going away",
+      "Still having urinary pain",
+      "i am still having urinary pain",
+      "still urin pain",
+      "Medicine not helping my urinary pain"
+    ],
+    "responses": [
+      "If your urinary pain persists even after taking medication, it might be due to another underlying issue. Are you experiencing any of these symptoms: severe back or side pain, blood in your urine, nausea or vomiting, fever and chills, or a frequent and urgent need to urinate? if yes then you may have kidney stones"
+    ],
+    "context": [""]
+  },
+
+  {
+      "tag": "Gas or Acid Reflux",
+      "patterns": [
+          "Yes, I have gas",
+          "Yes, I have bloating",
+          "I think it's gas",
+          "I have acid reflux",
+          "Yes, I have heartburn"
+      ],
+      "responses": [
+          "For gas or acid reflux, over-the-counter medications like simethicone (Gas-X) for gas or antacids (Tums, Rolaids,Pepto Bismol) for acid reflux can help. Eating smaller, more frequent meals and avoiding spicy or fatty foods can also reduce symptoms. If the pain persists, please consult a doctor."
+      ],
+      "context": [""]
+  },
+  {"tag": "Diarrhea",
+        "patterns": ["How do you treat diarrhea?","diarrhea", "what to do if i get Diarrhea?", "Which medicine to take if I get Diarrhea?", "How to cure Diarrhea?"],
+        "responses": ["Over-the-counter anti-diarrheal medications like loperamide (Imodium), Cyclopan, Zenflox oz along with Sporlac can be helpful Use them daily twice until the infection stops. 1)Hydrating the body is essential for recovering from diarrhea. 2)It is highly recommended to avoid dairy products. 3)However, if diarrhea lasts for more than 2 days, seek medical advice to avoid complications."],
+        "context": [ "" ]
+       },
+       {
+        "tag": "Cholera Symptoms",
+        "patterns": [
+          "diarrhea with vomiting ","vomiting and diarrhea","nausea with diarrhea","Watery diarrhea","leg pain,vomiting ,diarrhea"
+        ],
+        "responses": [
+          "If you have Watery diarrhea, sometimes described as rice-water stools due to its milky white appearance, you might have cholera.Symptoms of cholera include severe watery diarrhea, vomiting, rapid heart rate, dry mucous membranes, low blood pressure, muscle cramps, sunken eyes, excessive thirst, and rapid weight loss. If you're experiencing these symptoms, seek medical attention immediately. Immediate pain relievers such as acetaminophen (Tylenol) can help alleviate discomfort. Treatment for cholera typically involves rehydration therapy with oral rehydration solutions (ORS) and antibiotics like azithromycin or doxycycline to shorten the duration of illness."
+        ],
+        "context": [""]
+      },
+
+
+
+    {
+    "tag":" Symptoms of Appendicitis",
+            "patterns": [
+                "Medicines for appendicitis","appendicities medicines","how to get relief from appendicities","Yes , I feel pain that starts near the navel and moves to the lower right side of the abdomen. ","what are the medicines of appendicitis "," what are the home remedies of appendicitis","medicines for appendicitis","medication for appendicitis","appendicitis medicines"
+
+            ],
+            "responses": ["Appendicitis is a serious condition that requires prompt medical attention. If you're experiencing symptoms such as severe stomach pain, especially pain that starts near the navel and moves to the lower right side of the abdomen, nausea and vomiting, loss of appetite, fever, or sharp, stabbing pain, it's important to act quickly. Immediate care involves avoiding food or drink, applying a warm compress to the abdomen, and staying as still as possible to prevent further irritation. For pain relief, you can take over-the-counter pain relievers like acetaminophen (Tylenol), but avoid taking aspirin or ibuprofen as they can increase the risk of bleeding. However, pain relief medications are not a substitute for medical evaluation and treatment. Appendicitis typically requires surgical intervention to remove the appendix. It's crucial to consult a doctor or go to the nearest emergency room as soon as possible if you suspect you have appendicitis. Delaying medical care can lead to complications such as a ruptured appendix, which can be life-threatening. The doctor will perform a physical examination, possibly order imaging tests like an ultrasound or CT scan, and determine the appropriate course of action, which may include surgery. Remember, early detection and treatment are key to preventing serious complications. If you're unsure or concerned about your symptoms, don't hesitate to seek medical help immediately."],
+    "Context": [ "" ]
+       },
+
+
+
+    {
+    "tag":" Home remedies for kidney stones pain",
+            "patterns": [
+                "medicines for kidney stones ","Home remedies to get relief form kidney stones pain","treatment for kidney stones","kidney stones medicines","how to get relief from kidney stones"
+
+            ],
+            "responses": [
+               "To ease kidney stone pain at home, try these remedies: stay hydrated, drink lemon juice mixed with water, consume apple cider vinegar diluted in water, apply a warm compress to the painful area, take a warm bath with Epsom salt, adjust your diet to avoid foods high in oxalates and reduce sodium intake", "Over-the-counter pain relievers such as ibuprofen and acetaminophen(Paracetemol) can help manage the pain associated with kidney stones. Prescription medications like calcium channel blockers, alpha-blockers and phosphate binders may also be given to dissolve or prevent the formation of stones. In some cases, surgery may be necessary to remove large or complicated stones.","Don't worry, please reach out to the doctor soon for further evaluation and treatment" ],
+    "Context": [ "" ]
+       },
+
+    {
+    "tag":" Cramping Pain",
+            "patterns": [
+                "Yes , I'm having Cramping Pain  ","im having cramps","i have cramps","cramps","I have cramps","I am having Cramps",
+    "what might be the cause of Cramping Pain"
+
+            ],
+            "responses": [
+               "The possible Causes of cramping might be gastroenteritis, menstrual cramps, food poisoning.If you'd like more information about any of these conditions or if you have specific questions or concerns, please feel free to interact. I'm here to provide support and assistance to help you understand and address your symptoms." ],
+    "Context": [ "" ]
+       },
+
+
+
+    {
+    "tag":" Menstrual pain",
+            "patterns": [
+                "Yes , I want to know much more about Menstrual pain  ","data about Menstrual pain"
+
+            ],
+            "responses": [
+               "The uterus contracts to shed its lining during menstruation, causing pain,Chemicals called prostaglandins trigger uterine muscle contractions and inflammation, leading to pain.Do you want to know any home remedies"],
+    "Context": [ "" ]
+       },
+    {
+    "tag":" Home remedies for Menstrual pain,",
+            "patterns": [
+                "Yes , I want to know  about Home remedies for Menstrual pain" ," Menstrual pain  ","home remedies for Menstrual pain","treatment for menstrual pain","period pain relief","relief from period pain","medicines for period pain","period pain medicines","i have period pain","period pain"
+
+            ],
+            "responses": [
+               "Menstrual pain, also known as dysmenorrhea, can be relieved with various home remedies and medications. Applying heat to the lower abdomen with a heating pad or warm towel can help relax muscles and reduce pain. Gentle exercises like walking or yoga may also alleviate discomfort by improving blood flow. Additionally, herbal teas such as chamomile or ginger can have soothing effects. Additionally medicines like Meftal Spas help to relieve the pain"  ],
+    "Context": [ "" ]
+       },
+
+    {
+    "tag":" Pancreatitis",
+            "patterns": [
+                "Yes , I want to know much more about  pancreatitis  ","data about  pancreatitis"
+
+            ],
+            "responses": [
+               "Pancreatitis, which means inflammation of the pancreas, can happen for different reasons. One common cause is gallstones, which can block the pancreas tubes. Drinking too much alcohol over a long time can also lead to pancreatitis. "," Do you want to know any home remedies , Medications" ],
+    "Context": [ "" ]
+       },
+
+    {
+    "tag":" Home remedies, Medications for  pancreatitis,",
+            "patterns": [
+                "Yes , I want to know  about Home remedies for  pancreatitis" ,"  pancreatitis  ","home remedies for  pancreatitis","Medications for  pancreatitis"
+
+            ],
+            "responses": [
+               "Home remedies for pancreatitis include resting the stomach, drinking plenty of water, eating low-fat foods, avoiding alcohol, and using pain relievers like acetaminophen. Medications for pancreatitis typically include pain relievers such as acetaminophen, which can help manage pain and discomfort." ],
+    "Context": [ "" ]
+       },
+
+
+
+
+       {"tag": "Sore Throat",
+        "patterns": ["How do you treat sore throat?", "what to do if i get a sore throat?", "Which medicine to take if I get a sore throat?", "How to cure sore throat?"],
+        "responses": ["1) Make sure you get plenty of rest and drink a lot of fluids. 2)Inhale steam,Run hot water in a sink.Drape a towel over you to trap the steam, and have the person lean over the sink with the water running. Tell him to breathe deeply through his mouth and nose for 5 to 10 minutes. Repeat several times a day. 3)Have him sip chicken broth or warm tea with honey. Don’t give honey to a child under 12 months of age."],
+        "context": [ "" ]
+       },
+
+
+
+
+       {"tag": "Skin problems",
+        "patterns": ["How do you treat Skin problems?", "what to do if i get a skin allergy?", "Which medicine to take if I get a skin allergy?", "How to cure skin allergy?"],
+        "responses": ["1)Hydrocortisone cream. 2)Ointments like calamine lotion. 3)Antihistamines. 4)Cold compresses. 5)Oatmeal baths. 6)Talk to your doctor about what's best for your specific rash."],
+        "context": [ "" ]
+       },
+
+
+
+
+
+       {"tag": "Broken Toe",
+        "patterns": ["How do you treat a broken toe?", "what to do if i get a Broken Toe?", "Which medicine to take if I get a Broken Toe?", "How to cure Broken Toe?"],
+        "responses": ["1)To help decrease pain and swelling in a broken toe, elevate the foot, ice the injury, and stay off the foot. 2)Depending on the severity of the fracture, the toe may need to be put back into place (reduced), and some compound toe fractures may require surgery.3) Most broken toes heal without complications in six weeks."],
+        "context": [ "" ]
+       },
+
+       {"tag": "Choking",
+        "patterns": ["How do you treat choking?", "my friend is choking","choking","chocking","what to do if i get a Choke?", "Which medicine to take if I get Choked?", "How to cure Choking?"],
+        "responses": ["1)Encourage them to keep coughing to try to clear the blockage. 2)Ask them to try to spit out the object if it's in their mouth. 3)If coughing doesn't work, start back blows and Abdonominal thrusts"],
+        "context": [ "" ]
+       },
+
+       {"tag": "Wound",
+        "patterns": ["How do you treat a wound?", "what to do if i get a Wound?", "Which medicine to take if I get wounded?", "How to cure a wound?"],
+        "responses": ["1)Rinse the cut or wound with water and apply pressure with sterile gauze, a bandage, or a clean cloth. 2)If blood soaks through the bandage, place another bandage on top of the first and keep applying pressure. 3)Raise the injured body part to slow bleeding. 4)When bleeding stops, cover the wound with a new, clean bandage."],
+        "context": [ "" ]
+       },
+
+
+       {"tag": "Frost bite",
+        "patterns": ["How do you treat a Frost bite?", "what to do if i get a Frost bite?", "Which medicine to take if I get a Frost bite?", "How to cure Frost bite?"],
+        "responses": ["1)Get out of the cold. Once you're in a warm space, remove wet clothes and wrap up in a warm blanket. 2) Gently rewarm frostbitten areas. Soak frostbitten fingers, toes or other extremities in warm water — 105 to 110 F (about 40 to 43 C). If a thermometer isn't available, test the water by placing an uninjured hand or elbow in it — it should feel very warm, not hot. Soak for 20 to 30 minutes or until the skin becomes its normal color or loses its numbness. For the face or ears, apply a warm, wet washcloth. "],
+        "context": [ "" ]
+       },
+
+
+       {"tag": "Heat Stroke",
+        "patterns": ["How do you treat heat stroke?", "what to do if i get a Heat Stroke?", "Which medicine to take if I get Stroke?", "How to cure a Heat Stroke?"],
+        "responses": ["1)Cool the person's entire body by sponging or spraying cold water, and fan the person to help lower the person's body temperature. Watch for signs of rapidly progressing heatstroke, such as seizure, unconsciousness for longer than a few seconds, and moderate to severe difficulty breathing. "],
+        "context": [ "" ]
+       },
+
+       {"tag": "Insect Bites",
+        "patterns": ["How do you treat a Insect Bite?", "what to do if a insect bites me?", "Which medicine to take if I get bitten by a insect?", "How to cure insect bite?"],
+        "responses": ["1) Wash the affected area with soap and water. Apply a cold compress (such as a flannel or cloth cooled with cold water) or an ice pack to any swelling for at least 10 minutes. Raise or elevate the affected area if possible, as this can help reduce swelling. "],
+        "context": [ "" ]
+       },
+
+       {"tag": "nose bleed",
+        "patterns": ["How do you treat a bleeding nose?", "what to do if i my nose is bleeding?", "Which medicine to take if I get nose bleed?", "How to cure nose bleeding?","nose bleed","i have nose bleeding"],
+        "responses": ["1) Wash the affected area with soap and water. Apply a cold compress (such as a flannel or cloth cooled with cold water) or an ice pack to any swelling for at least 10 minutes. Raise or elevate the affected area if possible, as this can help reduce swelling "],
+        "context": [ "" ]
+       },
+
+       {"tag": "Pulled Muscle",
+        "patterns": ["How do you treat a Pulled Muscle?", "what to do if my muscle is pulled?", "Which medicine to take if I got pulled muscle?", "How to cure a pulled muscle?"],
+        "responses": ["1) Apply ice for 10 to 15 minutes every 1 hour for the first day and every 3 to 4 hours after that. Use ice for the first 3 days. After 3 days, either heat or ice may be helpful if you still have pain. Rest the pulled muscle for at least a day. "],
+        "context": [ "" ]
+       },
+
+       {"tag": "Rectal bleeding",
+        "patterns": ["How do you treat Rectal Bleeding?", "what to do if i get a Rectal Bleeding?", "Which medicine to take if I get Rectal Bleeding?", "How to cure Rectal Bleeding?"],
+        "responses": ["1) For minimal bleeding due to hemorrhoids or rectal fissures, physicians will usually direct home treatment with lots of water, ice packs and possibly over the counter ointments or suppositories to create movement in the bowels or to soften the stool. Emergency treatment might include an IV in the case of dehydration. "],
+        "context": [ "" ]
+       },
+
+       {"tag": "Sun Burn",
+        "patterns": ["How do you treat Sun Burn?", "what to do if i get a Sun Burn?", "Which medicine to take if I get Sun Burn?", "How to cure a Sun Burn?"],
+        "responses": ["1) Cool the skin, 2) Drink water to prevent dehydration., 3) Take a pain reliever such as ibuprofen (Advil, Motrin IB, others) to help with the discomfort and swelling of sunburn. "],
+        "context": [ "" ]
+       },
+
+
+
+       {"tag": "Vertigo",
+        "patterns": ["How do you treat a Vertigo?", "what to do if i get a Vertigo?", "Which medicine to take if I get Vertigo?,How to cure a Vertigo?,I feel a sensation of spinning, tilting, swaying, or feeling unbalanced, and I'm experiencing nausea, vomiting, sweating, abnormal eye movements, or headache."],
+        "responses": ["1) Relieve or Prevent Dizziness. Have the person lie down and rest, 2) Keep the Person Safe. Help the person avoid falls, 3) Call a Health Care Provider. Any new signs and symptoms of vertigo should be checked by a health care provider,Medications commonly prescribed for vertigo include antihistamines such as meclizine (Antivert), benzodiazepines such as diazepam (Valium), and anti-nausea medications such as promethazine (Phenergan) or ondansetron (Zofran). However, it's important to consult a healthcare professional before taking any medication for vertigo."],
+        "context": [ "" ]
+       },
+
+       {"tag": "Normal Bleeding",
+        "patterns": ["How do you treat bleeding?", "what to do if i get a Bleeding?", "Which medicine to take if I get bleeding?", "How to cure Bleeding?"],
+        "responses": ["1) First aid actions to manage external bleeding include applying direct pressure to the wound, maintaining the pressure using pads and bandages, and, raising the injured limb above the level of the heart if possible. "],
+        "context": [ "" ]
+       },
+
+       {"tag": "Eye Injury",
+        "patterns": ["How do you treat an eye Injury?", "what to do if i get a eye Injury?", "Which medicine to take if I injured my eye?", "How to cure injured eye?"],
+        "responses": ["1) DO NOT rub the eye, 2)Blink several times and allow tears to flush out the particle, 3) Lift the upper eyelid over the lashes of your lower lid to let the eyelashes try to brush the particle out., 4) Use eyewash, saline solution or running tap water to flush the eye out "],
+        "context": [ "" ]
+       },
+
+       {"tag": "Chemical Burn",
+        "patterns": ["How do you treat a chemical burn?", "what to do if i get a Chemical Burn?", "Which medicine to take if I get burn due to chemicals?", "How to cure Chemical Burn?","As an injured person, I experience symptoms such as redness, blistering, swelling, and pain due to a chemical burn."],
+        "responses": ["1) rinsed with water · Flush the area for at least 20 minutes. · As you flush the area, take off any clothing or jewellery that has the chemical on it ,2) Don't use a strong stream of water, if possible., 3)Don't try to neutralize the burn with acid or alkali. This could cause a chemical reaction that worsens the burn, 4) Don't put antibiotic ointment on the burn. "],
+        "context": [ "" ]
+       },
+
+       {"tag": "Poison",
+        "patterns": ["How do you treat Poison?",
+       "What to do if I ingest a poisonous substance?",
+       "What medicines can help with poisoning?",
+       "As an injured person, I feel symptoms like nausea, vomiting, abdominal pain, dizziness, headache, difficulty breathing, confusion, and unconsciousness."],
+        "responses": ["1) Get to fresh air right away. Call the toll-free Poison Help line (1-800-222-1222), which connects you to your local poison center. 2) Take off any clothing the poison touched. Rinse skin with running water for 15 to 20 minutes. Call the toll-free Poison Help line (1-800-222-1222), which connects you to your local poison center. 3) If the person swallowed the wrong medicine or too much medicine: Call Poison Help (1-800-222-1222), which connects you to your local poison center. 4) Every poisoning is different.",
+       "Medicines used to treat poisoning depend on the specific substance ingested and may include activated charcoal, antidotes, and supportive care such as intravenous fluids and oxygen therapy."],
+        "context": [ "" ]
+       },
+
+
+
+
+
+       {"tag": "Head Injury",
+        "patterns": ["How do you treat a head Injury?", "what to do if i get a Head Injury?", "Which medicine to take if I get injured in the head?", "How to cure Head Injury?"],
+        "responses": ["1) Apply firm pressure to the wound with sterile gauze or a clean cloth. But don't apply direct pressure to the wound if you suspect a skull fracture. ", "Medicines used to manage symptoms of a head injury may include pain relievers such as acetaminophen or ibuprofen to alleviate headache and reduce fever. Anti-nausea medications may be prescribed if nausea and vomiting are present. Additionally, medications to control intracranial pressure or prevent seizures may be administered in severe cases."],
+        "context": [ "" ]
+       },
+
+       {"tag": "Fainting",
+        "patterns": ["How do you treat Faint?", "what to do if i feel like Fainting?", "Which medicine to take if I get a Faint?", "How to cure Fainting?","I exhibit symptoms such as dizziness, lightheadedness, blurred vision, nausea, clammy skin, and loss of consciousness."],
+        "responses": ["1) Lie down or sit down. To reduce the chance of fainting again, don't get up too quickly, 2) Place your head between your knees if you sit down, 3)Position the person on his or her back. If there are no injuries and the person is breathing, raise the person's legs above heart level — about 12 inches (30 centimeters) — if possible. Loosen belts, collars or other constrictive clothing. ","Medicines are typically not used to treat fainting episodes directly. However, if fainting is caused by an underlying medical condition such as low blood pressure or irregular heart rhythm, medications to manage these conditions may be prescribed. It's important to consult a healthcare professional for proper diagnosis and treatment."],
+        "context": [ "" ]
+       },
+
+       {"tag": "Headache",
+        "patterns": ["How do you treat a mild Headache?", "what to do if i get a mild Headache?", "Which medicine to take if I have a mild headache?", "How to cure a mild headache?","headache","i have headache","Headache"],
+        "responses": ["Give ibuprofen (Advil, Motrin), aspirin, or acetaminophen (Tylenol) for pain. Avoid ibuprofen and other NSAIDs if the person has heart failure or kidney failure. Do not give aspirin to a child under age 18."],
+        "context": [ "" ]
+       },
+
+  {"tag": "Cold",
+        "patterns": ["How do you treat a Cold?", "what to do if i get a mild Cold?","i have cold","i have common cold","common cold","cold", "Which medicine to take if I have a Cold?", "How to cure Cold?"," I feel symptoms such as a runny or stuffy nose, sore throat, cough, sneezing, mild fever, and fatigue."],
+        "responses": ["1)Keeping hydrated is absolutely vital to help 'flush' out the cold, as well as to break down congestion and keep your throat lubricated. 2)Vitamin C is extremely helpful when fighting infection, so at the first sign of a cold be sure to increase your intake by eating plenty of berries, citrus fruits, papayas, broccoli and red peppers which will help keep you protected. 3)When it comes to combating a cold,Vitamin D is essential in helping to regulate immune response.","medicines used for cold include decongestants (such as pseudoephedrine or phenylephrine) to alleviate nasal congestion, antihistamines (such as loratadine or cetirizine) to reduce sneezing and runny nose, cough suppressants (such as dextromethorphan) to ease coughing, and pain relievers (such as acetaminophen or ibuprofen) to reduce fever and relieve sore throat or headache. It's important to read the labels carefully and consult a healthcare professional if you have any questions or concerns about medication use."
+   ],
+        "context": [ "" ]
+       },
+
+  {"tag": "Rash",
+        "patterns": ["How do you treat Rashes?", "what to do if i get a Rash?", "Which medicine to take if I have a Rash?", "How to cure Rash?"],
+        "responses": ["1)Olive oil helps in healing and promotes skin renewal given it is packed with vitamin E and antioxidants. It also soothes the skin and reduces itching. 2)Baking soda is useful in drying skin rashes as also in relieving itching and inflammation. 3)Aloe Vera,Thanks to its antibacterial, antifungal, anti-inflammatory and emollient properties, aloe vera is excellent for treating a number of skin ailments including rashes as also soothing the skin."],
+        "context": [ "" ]
+       },
+
+  {"tag": "snake bite",
+        "patterns": ["How do you treat a snake bite?", "what to do if i get a snake bite?", "Which medicine to take if I get a snake bite?", "How to cure snake bite?", "i got bit by a snake"],
+        "responses": ["While waiting for medical help: 1)Move the person beyond striking distance of the snake. 2)Have the person lie down with wound below the heart. 3)Keep the person calm and at rest, remaining as still as possible to keep venom from spreading. 4)Cover the wound with loose, sterile bandage. 5)Remove any jewelry from the area that was bitten. 6)Remove shoes if the leg or foot was bitten."],
+        "context": [ "" ]
+       },
+
+  {"tag": "animal bite",
+        "patterns": ["How do you treat a animal bite?", "How do you treat a monkey bite?","How do you treat a dog bite?", "what to do if i get a animal bite?", "Which medicine to take if I get a monekey bite?", "How to cure dog bite?", "i got bit by a dog"],
+        "responses": ["1)Wash the wound with soap and warm water. 2)Gently press a clean cloth over the wound to stop the flow of blood. 3)Apply an antibacterial ointment to the wound. 4)Cover with a sterile bandage. 5)Watch for signs of infection. 6)Seek help if you suspect infection or possible exposure to rabies, or if the wound is severe."],
+        "context": [ "" ]
+       },
+
+
+     {"tag": "CPR",
+        "patterns": ["How to give CPR??","CPR","cpr", "what to do in a CPR?", "What steps to take in a CPR??", "How to help a drowning person in CPR?"],
+        "responses": ["1)For an adult or child, place the heel of one hand on the center of the chest at the nipple line. You can also push with one hand on top of the other. For an infant, place two fingers on the breastbone. 2)For an adult or child, press down at least 2 inches. Make sure not to press on ribs. For an infant, press down about 1 and 1/2 inches. Make sure not to press on the end of the breastbone. 3)Do chest compressions only, at the rate of 100-120 per minute or more. Let the chest rise completely between pushes. 4)Check to see if the person has started breathing."],
+        "context": [ "" ]
+       },
+
+  {"tag": "Fracture",
+        "patterns": ["How do you treat a Fracture?", "what to do if i get a Fracture?", "Which medicine to take if I have a Fracture?", "How to cure a Fracture?"],
+        "responses": ["1)Stop any bleeding. Apply pressure to the wound with a sterile bandage, a clean cloth or a clean piece of clothing. 2)Immobilize the injured area. Don't try to realign the bone or push a bone that's sticking out back in. If you've been trained in how to splint and professional help isn't readily available, apply a splint to the area above and below the fracture sites. Padding the splints can help reduce discomfort. 3)Apply ice packs to limit swelling and help relieve pain. Don't apply ice directly to the skin. Wrap the ice in a towel, piece of cloth or some other material. 4)Treat for shock. If the person feels faint or is breathing in short, rapid breaths, lay the person down with the head slightly lower than the trunk and, if possible, elevate the legs."],
+        "context": [ "" ]
+       },
+
+   {
+     "tag": "Glaucoma",
+     "patterns": [
+       "What are the symptoms of glaucoma?",
+       "How is glaucoma diagnosed?",
+       "What are the treatment options for glaucoma?",
+       "I have eye pain and blurred vision, could it be glaucoma?"
+     ],
+     "responses": [
+       "Symptoms of glaucoma may include eye pain, blurred vision, halos around lights, and gradual loss of peripheral vision. Regular eye exams are crucial for early detection and treatment to prevent irreversible vision loss."
+     ],
+     "context": [ "" ]
+   },
+   {
+     "tag": "Ovarian_cancer",
+     "patterns": [
+       "What are the symptoms of ovarian cancer?",
+       "How is ovarian cancer diagnosed?",
+       "What are the treatment options for ovarian cancer?",
+       "I have bloating, pelvic pain, and frequent urination, could it be ovarian cancer?"
+     ],
+     "responses": [
+       "Symptoms of appendicitis typically include abdominal pain (especially in the lower right abdomen), nausea, vomiting, and fever. It's important to seek medical attention promptly if you suspect appendicitis, as it often requires surgical removal of the inflamed appendix. Treatment may involve antibiotics to prevent infection and pain relievers such as acetaminophen (Tylenol) or ibuprofen (Advil) to manage pain and inflammation. In some cases, surgery may be necessary to remove the appendix."
+     ],
+     "context": [ "" ]
+   },
+   {
+     "tag": "Endometriosis",
+     "patterns": [
+       "What are the symptoms of endometriosis?",
+       "How is endometriosis diagnosed?",
+       "What are the treatment options for endometriosis?",
+       "I have severe menstrual cramps and pelvic pain, could it be endometriosis?"
+     ],
+     "responses": [
+       "Endometriosis is a condition where tissue similar to the lining of the uterus grows outside the uterus, causing pelvic pain and infertility. Diagnosis often involves laparoscopic surgery, and treatment may include pain management, hormone therapy, or surgery to remove the abnormal tissue."
+     ],
+     "context": [ "" ]
+   }
+
+
+
+
+
+
+
+
+    ]
+  }
