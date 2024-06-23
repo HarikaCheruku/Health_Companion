@@ -1,0 +1,11 @@
+Flask
+flask-mysqldb
+flask-wtf
+bcrypt
+tensorflow
+pandas
+numpy
+scikit-learn==1.2.2
+gTTS
+requests
+email-validator
